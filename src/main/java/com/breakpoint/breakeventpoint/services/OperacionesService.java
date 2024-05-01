@@ -28,4 +28,20 @@ public class OperacionesService {
     public double getTotalCF() {
         return costoFijoRepository.getSumaMontos();
     }
+
+    /*
+     * Método para calcular la Cantidad de Equilibrio:
+    */
+    public double getEquilibrioQty(double precioUnitarioVenta){
+        double totalCF = this.getTotalCF();
+        double totalCV = this.getTotalCV();
+        return totalCF/(precioUnitarioVenta-totalCV);
+    }
+
+    /*
+     * Método para calcular el ingreso de Equilibrio:
+    */
+    public double getIngresoEquilibrio(double precioUnitarioVenta){
+        return this.getEquilibrioQty(precioUnitarioVenta) * precioUnitarioVenta;
+    }
 }
