@@ -8,21 +8,21 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public class CostoEntity {
+public class CostoFijoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descripcion;
     private double monto;
 
-    public CostoEntity(){}
+    public CostoFijoEntity(){}
 
-    public CostoEntity(String descripcion, double monto) {
+    public CostoFijoEntity(String descripcion, double monto) {
         this.descripcion = descripcion;
         this.monto = monto;
     }
 
-    public CostoEntity(Long id, String descripcion, double monto) {
+    public CostoFijoEntity(Long id, String descripcion, double monto) {
         this.id = id;
         this.descripcion = descripcion;
         this.monto = monto;
@@ -56,7 +56,7 @@ public class CostoEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CostoEntity that = (CostoEntity) o;
+        CostoFijoEntity that = (CostoFijoEntity) o;
         return Double.compare(that.monto, monto) == 0 && id.equals(that.id) && descripcion.equals(that.descripcion);
     }
 
