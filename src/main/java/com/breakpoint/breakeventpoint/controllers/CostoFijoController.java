@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/costos-fijos")
+@RequestMapping("api/v1/costos-fijos")
 public class CostoFijoController {
     private final CostoFijoService costoFijoService;
 
