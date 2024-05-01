@@ -29,7 +29,7 @@ Puedes ejecutar la aplicación de las siguientes maneras:
 1. Abre una ventana de terminal o línea de comandos.
 2. Navega hasta el directorio raíz del proyecto.
 3. Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
-  mvn clean pinstall
+  mvn clean install
 4. Una vez que se haya generado el paquete de la aplicación, ejecuta el siguiente comando para iniciarla:
    java -jar target/nombre-del-archivo.jar
 
