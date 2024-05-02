@@ -54,27 +54,16 @@ public class OperacionesService {
      * Unidades vendidas | costo total          | ingreso por ventas
      * cantidad unidades  totalCF+totalCV*qty     precio_venta * qty
     */
-    public List<List<GraphDataDto>> graphData(double qtyUnidades, double unitPriceVenta) {
-        List<List<GraphDataDto>> batchedGraphData = new ArrayList<>();
-        List<GraphDataDto> currentBatch = new ArrayList<>();
+    public List<GraphDataDto> graphData(double qtyUnidades, double unitPriceVenta) {
+        List<GraphDataDto> graphDataList = new ArrayList<>();
 
         for (int i = 0; i <= qtyUnidades; i++) {
             double costoTotal = this.getTotalCF() + this.getTotalCV() * i;
             double ingresoOfVenta = unitPriceVenta * i;
-
             GraphDataDto graphData = new GraphDataDto(i, costoTotal, ingresoOfVenta);
-            currentBatch.add(graphData);
-
-            if (currentBatch.size() == 10) {
-                batchedGraphData.add(currentBatch);
-                currentBatch = new ArrayList<>();
-            }
+            graphDataList.add(graphData);
         }
 
-        if (!currentBatch.isEmpty()) {
-            batchedGraphData.add(currentBatch);
-        }
-
-        return batchedGraphData;
+        return graphDataList;
     }
 }

@@ -47,12 +47,9 @@ public class operacionesController {
         return ResponseEntity.ok(responseDto);
     }
 
-    @GetMapping("/getGraphData")
-    public ResponseEntity<List<List<GraphDataDto>>> getGraphData(
-            @RequestParam("qtyUnidades") double qtyUnidades,
-            @RequestParam("unitPriceVenta") double unitPriceVenta
-    ) {
-        List<List<GraphDataDto>> graphDataList = operacionesService.graphData(qtyUnidades, unitPriceVenta);
+    @GetMapping("/graphData")
+    public ResponseEntity<List<GraphDataDto>> getGraphData(@RequestParam("qtyUnidades") double qtyUnidades, @RequestParam("unitPriceVenta") double unitPriceVenta) {
+        List<GraphDataDto> graphDataList = operacionesService.graphData(qtyUnidades, unitPriceVenta);
         return ResponseEntity.ok(graphDataList);
     }
 }
