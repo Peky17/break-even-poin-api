@@ -37,3 +37,5 @@ Puedes ejecutar la aplicación de las siguientes maneras:
 ## Ingresa a esta URL:
   http://localhost:8080/swagger-ui/index.html#/
 
+### 4. Efectuar pruebas unitarias y de integración desde la línea de comandos
+        `mvn test`
