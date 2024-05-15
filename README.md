@@ -45,3 +45,5 @@ Puedes ejecutar la aplicación de las siguientes maneras:
 
 ### 4. Efectuar pruebas unitarias y de integración desde la línea de comandos
         mvn test
+## Video del funcionamiento de la app (frontend & backend)
+    https://drive.google.com/file/d/1XCoLsSqQHKAXPLmUsdRP23AvHj5aHvlv/view?usp=sharing
