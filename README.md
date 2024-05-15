@@ -9,7 +9,13 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado lo siguiente:
 - Java Development Kit (JDK) 17.
 - Maven (opcional, si prefieres construir la aplicación desde el código fuente).
 
-## Configuración
+## a) Importar base de datos
+Nota: En "application.properties" se establece que el puerto de la base de datos es el "3307". Sí tienes la base de datos MySQL en el puerto por defecto "3306" se debe cambiar esa propiedad o modificar el número de puerto del servidor de base de datos. 
+
+Para la importación de la base de datos se recomienda copesr el contenido (SQL) y pegarlo en consola por medio del software cliente MySQL de su preferencia. Se recomienda HeidiSQL:
+https://www.heidisql.com/
+
+## b) Configuración
 
 1. Clona o descarga el repositorio de la aplicación
 2. Abre el proyecto en tu IDE preferido (por ejemplo, IntelliJ IDEA).
