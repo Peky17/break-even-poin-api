@@ -40,7 +40,7 @@ Puedes ejecutar la aplicación de las siguientes maneras:
    java -jar target/nombre-del-archivo.jar
 
 ### 3. Documentación y prueba de los endpoint del API
-## Ingresa a esta URL:
+## Ingresa a esta URL para acceder a la UI Swagger:
   http://localhost:8080/swagger-ui/index.html#/
 
 ### 4. Efectuar pruebas unitarias y de integración desde la línea de comandos
